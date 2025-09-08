@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
-	<title>Reservation</title>
+	<title>Proje Talebi - TITARA</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
@@ -41,7 +41,7 @@
 	<!-- Title Page -->
 	<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15" style="background-image: url(../assets/images/bg-title-page-03.jpg);">
 		<h2 class="tit6 t-center">
-			Reservation
+			Proje Talebi
 		</h2>
 	</section>
 
@@ -52,79 +52,132 @@
 				<div class="col-lg-12 p-b-30">
 					<div class="t-center">
 						<span class="tit2 t-center">
-							Reservation
+							Proje Talebi
 						</span>
 
 						<h3 class="tit3 t-center m-b-35 m-t-2">
-							Book Table
+							Yazılım Projenizi Hayata Geçirin
 						</h3>
+						<p class="t-center m-b-50" style="font-size: 1.2rem; color: #666; max-width: 600px; margin: 0 auto;">
+							Modern teknolojilerle işinizi dijitalleştirin. Uzman ekibimiz size en uygun çözümü sunmak için buradayız.
+						</p>
 					</div>
 
 					<form class="wrap-form-reservation">
 						<div class="row">
-							<div class="col-md-4">
-								<!-- Name -->
+							<div class="col-md-6">
+								<!-- Ad Soyad -->
 								<span class="txt9">
-									Name
+									Ad Soyad *
 								</span>
 
 								<div class="wrap-inputname size12 bo2 bo-rad-10 m-t-3 m-b-23">
-									<input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="name" placeholder="Name">
+									<input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="name" placeholder="Adınız ve soyadınız" required>
 								</div>
 							</div>
 
-							<div class="col-md-4">
+							<div class="col-md-6">
+								<!-- Şirket Adı -->
+								<span class="txt9">
+									Şirket Adı
+								</span>
+
+								<div class="wrap-inputcompany size12 bo2 bo-rad-10 m-t-3 m-b-23">
+									<input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="company" placeholder="Şirket adınız">
+								</div>
+							</div>
+
+							<div class="col-md-6">
 								<!-- Email -->
 								<span class="txt9">
-									Email
+									E-posta *
 								</span>
 
 								<div class="wrap-inputemail size12 bo2 bo-rad-10 m-t-3 m-b-23">
-									<input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="email" placeholder="Email">
+									<input class="bo-rad-10 sizefull txt10 p-l-20" type="email" name="email" placeholder="ornek@email.com" required>
 								</div>
 							</div>
 
-							<div class="col-md-4">
-								<!-- Phone -->
+							<div class="col-md-6">
+								<!-- Telefon -->
 								<span class="txt9">
-									Phone
+									Telefon *
 								</span>
 
 								<div class="wrap-inputphone size12 bo2 bo-rad-10 m-t-3 m-b-23">
-									<input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="phone" placeholder="Phone">
+									<input class="bo-rad-10 sizefull txt10 p-l-20" type="tel" name="phone" placeholder="+90 5XX XXX XX XX" required>
 								</div>
 							</div>
 
 							<div class="col-md-4">
-								<!-- Date -->
+								<!-- Proje Türü -->
 								<span class="txt9">
-									Date
+									Proje Türü *
 								</span>
 
-								<div class="wrap-inputdate size12 bo2 bo-rad-10 m-t-3 m-b-23">
-									<input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="date" placeholder="Date">
+								<div class="wrap-inputproject size12 bo2 bo-rad-10 m-t-3 m-b-23">
+									<select class="bo-rad-10 sizefull txt10 p-l-20" name="project_type" required>
+										<option value="">Proje türünü seçin</option>
+										<option value="web-development">Web Geliştirme</option>
+										<option value="mobile-app">Mobil Uygulama</option>
+										<option value="e-commerce">E-Ticaret Platformu</option>
+										<option value="ai-ml">Yapay Zeka & Makine Öğrenmesi</option>
+										<option value="cloud-devops">Bulut & DevOps</option>
+										<option value="cybersecurity">Siber Güvenlik</option>
+										<option value="consulting">Teknoloji Danışmanlığı</option>
+										<option value="other">Diğer</option>
+									</select>
 								</div>
 							</div>
 
 							<div class="col-md-4">
-								<!-- Time -->
+								<!-- Bütçe Aralığı -->
 								<span class="txt9">
-									Time
+									Bütçe Aralığı
 								</span>
 
-								<div class="wrap-inputtime size12 bo2 bo-rad-10 m-t-3 m-b-23">
-									<input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="time" placeholder="Time">
+								<div class="wrap-inputbudget size12 bo2 bo-rad-10 m-t-3 m-b-23">
+									<select class="bo-rad-10 sizefull txt10 p-l-20" name="budget">
+										<option value="">Bütçe aralığını seçin</option>
+										<option value="under-10k">10.000 TL altı</option>
+										<option value="10k-25k">10.000 - 25.000 TL</option>
+										<option value="25k-50k">25.000 - 50.000 TL</option>
+										<option value="50k-100k">50.000 - 100.000 TL</option>
+										<option value="100k-250k">100.000 - 250.000 TL</option>
+										<option value="over-250k">250.000 TL üzeri</option>
+										<option value="discuss">Görüşelim</option>
+									</select>
 								</div>
 							</div>
 
 							<div class="col-md-4">
-								<!-- People -->
+								<!-- Tahmini Süre -->
 								<span class="txt9">
-									People
+									Tahmini Süre
 								</span>
 
-								<div class="wrap-inputpeople size12 bo2 bo-rad-10 m-t-3 m-b-23">
-									<input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="people" placeholder="People">
+								<div class="wrap-inputduration size12 bo2 bo-rad-10 m-t-3 m-b-23">
+									<select class="bo-rad-10 sizefull txt10 p-l-20" name="duration">
+										<option value="">Süreyi seçin</option>
+										<option value="1-2-weeks">1-2 hafta</option>
+										<option value="1-month">1 ay</option>
+										<option value="2-3-months">2-3 ay</option>
+										<option value="3-6-months">3-6 ay</option>
+										<option value="6-12-months">6-12 ay</option>
+										<option value="over-1-year">1 yıldan fazla</option>
+										<option value="ongoing">Devam eden proje</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="col-md-12">
+								<!-- Proje Açıklaması -->
+								<span class="txt9">
+									Proje Açıklaması *
+								</span>
+
+								<div class="wrap-inputdescription size12 bo2 bo-rad-10 m-t-3 m-b-23">
+									<textarea class="bo-rad-10 sizefull txt10 p-l-20 p-t-15" name="description" rows="5" placeholder="Projenizi detaylı olarak açıklayın. Hangi özellikler istiyorsunuz? Hangi teknolojileri tercih ediyorsunuz? Hedef kitleniz kim?" required></textarea>
 								</div>
 							</div>
 						</div>
@@ -132,7 +185,7 @@
 						<div class="wrap-btn-booking flex-c-m m-t-6">
 							<!-- Button3 -->
 							<button type="submit" class="btn3 flex-c-m size13 txt11 trans-0-4">
-								Book Table
+								Proje Talebini Gönder
 							</button>
 						</div>
 					</form>

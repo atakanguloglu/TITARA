@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
-	<title>Gallery</title>
+	<title>Projelerimiz - TITARA</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
@@ -51,9 +51,14 @@
 
 	<!-- Title Page -->
 	<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15" style="background-image: url(/assets/images/bg-title-page-02.jpg) !important; background-size: cover !important; background-position: center center !important;">
-		<h2 class="tit6 t-center">
-			Gallery
-		</h2>
+		<div class="title-content text-center">
+			<h2 class="tit6 t-center" style="font-size: 3.5rem; font-weight: 800; color: #fff; text-shadow: 0 4px 20px rgba(0,0,0,0.8); margin-bottom: 20px;">
+				Projelerimiz
+			</h2>
+			<p style="font-size: 1.4rem; color: #e8f4f8; text-shadow: 0 2px 10px rgba(0,0,0,0.6); max-width: 600px; margin: 0 auto; line-height: 1.6;">
+				Modern teknolojilerle hayata geçirdiğimiz yazılım projelerimizi keşfedin
+			</p>
+		</div>
 	</section>
 
 	<!-- Gallery Categories -->
@@ -62,279 +67,674 @@
 			<div class="row">
 				<div class="col-12">
 					<h3 class="gallery-categories-title text-center m-b-50">
-						Galeri Kategorileri
+						Proje Kategorileri
 					</h3>
+					<p class="text-center m-b-50" style="font-size: 1.2rem; color: #666; max-width: 800px; margin: 0 auto 50px;">
+						Web geliştirme, mobil uygulama, e-ticaret ve yapay zeka alanlarında gerçekleştirdiğimiz başarılı projelerimizi inceleyin. Her proje, müşteri memnuniyeti ve kalite odaklı yaklaşımımızın bir yansımasıdır.
+					</p>
 					<div class="gallery-categories-filter text-center">
-						<button class="gallery-filter-btn active" data-filter="all">Tümü</button>
-						<button class="gallery-filter-btn" data-filter="food">Yemekler</button>
-						<button class="gallery-filter-btn" data-filter="restaurant">Restoran</button>
-						<button class="gallery-filter-btn" data-filter="chef">Şef</button>
-						<button class="gallery-filter-btn" data-filter="events">Etkinlikler</button>
+						<button class="gallery-filter-btn active" data-filter="all">
+							Tümü
+							<span class="category-counter" id="count-all">21</span>
+						</button>
+						<button class="gallery-filter-btn" data-filter="web">
+							Web Geliştirme
+							<span class="category-counter" id="count-web">6</span>
+						</button>
+						<button class="gallery-filter-btn" data-filter="mobile">
+							Mobil Uygulama
+							<span class="category-counter" id="count-mobile">4</span>
+						</button>
+						<button class="gallery-filter-btn" data-filter="ecommerce">
+							E-Ticaret
+							<span class="category-counter" id="count-ecommerce">4</span>
+						</button>
+						<button class="gallery-filter-btn" data-filter="management">
+							Yönetim Paneli
+							<span class="category-counter" id="count-management">3</span>
+						</button>
+						<button class="gallery-filter-btn" data-filter="ai">
+							Yapay Zeka
+							<span class="category-counter" id="count-ai">4</span>
+						</button>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<!-- Gallery -->
-	<section class="section-gallery p-t-50 p-b-100">
+	<!-- Projects -->
+	<section class="section-projects p-t-50 p-b-100">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
-					<div class="modern-gallery-grid">
-						<!-- Yemekler Kategorisi -->
-						<div class="gallery-item" data-category="food">
-							<div class="gallery-card">
-								<a href="../assets/images/photo-gallery-01.jpg" data-lightbox="gallery-food">
-									<img src="../assets/images/photo-gallery-01.jpg" alt="Yemek 1" class="gallery-img">
-									<div class="gallery-overlay">
-										<h4>Lezzetli Yemekler</h4>
-										<p>Özel tariflerimiz</p>
-									</div>
-								</a>
+					<div class="projects-loading" id="projects-loading">
+						<div class="loading-spinner"></div>
+					</div>
+					<div class="projects-container" id="projects-container">
+						<!-- GOvsAT Projesi - Yönetim Paneli Kategorisi -->
+						<div class="project-card" 
+							 data-category="management"
+							 data-title="GOvsAT Premium"
+							 data-description="Spor tesisleri için kapsamlı yönetim ve rezervasyon paneli. Kullanıcılar saha rezervasyonu yapabilir, ödeme işlemlerini gerçekleştirebilir ve tesis yöneticileri tüm operasyonları tek panelden yönetebilir. Modern arayüz tasarımı ve kullanıcı dostu navigasyon ile kolay kullanım sağlar."
+							 data-image="../assets/images/photo-gallery-01.jpg"
+							 data-link="https://govsat.com.tr/"
+							 data-tech="PHP,MySQL,JavaScript,Bootstrap,jQuery,AJAX"
+							 data-features="Online Rezervasyon Sistemi,Güvenli Ödeme Entegrasyonu,Çoklu Tesis Yönetimi,Gerçek Zamanlı Takvim,Otomatik Bildirimler,Detaylı Raporlama,Admin Dashboard,Responsive Tasarım">
+							<div class="project-image">
+								<img src="../assets/images/photo-gallery-01.jpg" alt="GOvsAT Spor Tesisleri Yönetim Paneli" class="project-img">
+								<div class="project-category">Yönetim Paneli</div>
+							</div>
+							<div class="project-content">
+								<h3 class="project-title">GOvsAT Premium</h3>
+								<p class="project-description">
+									Spor tesisleri için kapsamlı yönetim ve rezervasyon paneli. Kullanıcılar saha rezervasyonu yapabilir, ödeme işlemlerini gerçekleştirebilir ve tesis yöneticileri tüm operasyonları tek panelden yönetebilir.
+								</p>
+								<div class="project-tech">
+									<span class="tech-tag">PHP</span>
+									<span class="tech-tag">MySQL</span>
+									<span class="tech-tag">JavaScript</span>
+									<span class="tech-tag">Bootstrap</span>
+								</div>
+								<div class="project-actions">
+									<button class="project-link modal-trigger">
+										<i class="fa fa-eye"></i> Detayları Gör
+									</button>
+								</div>
 							</div>
 						</div>
 
-						<div class="gallery-item" data-category="food">
-							<div class="gallery-card">
-								<a href="../assets/images/photo-gallery-02.jpg" data-lightbox="gallery-food">
-									<img src="../assets/images/photo-gallery-02.jpg" alt="Yemek 2" class="gallery-img">
-									<div class="gallery-overlay">
-										<h4>Geleneksel Lezzetler</h4>
-										<p>Anadolu mutfağı</p>
-									</div>
-								</a>
+						<!-- GOvsAT - Rezervasyon Sistemi -->
+						<div class="project-card" 
+							 data-category="management"
+							 data-title="Rezervasyon Sistemi"
+							 data-description="Online saha rezervasyonu ve ödeme sistemi. Kullanıcılar istedikleri sahayı seçerek kolayca rezervasyon yapabilir ve güvenli ödeme işlemlerini gerçekleştirebilir. Gerçek zamanlı takvim görünümü ve otomatik bildirimler ile kullanıcı deneyimini artırır."
+							 data-image="../assets/images/photo-gallery-02.jpg"
+							 data-link="https://govsat.com.tr/"
+							 data-tech="Payment Gateway,Real-time,WebSocket,Stripe API"
+							 data-features="Gerçek Zamanlı Rezervasyon,Güvenli Ödeme,Otomatik Bildirimler,Takvim Entegrasyonu,Email/SMS Bildirimleri">
+							<div class="project-image">
+								<img src="../assets/images/photo-gallery-02.jpg" alt="GOvsAT Rezervasyon Sistemi" class="project-img">
+								<div class="project-category">Yönetim Paneli</div>
+							</div>
+							<div class="project-content">
+								<h3 class="project-title">Rezervasyon Sistemi</h3>
+								<p class="project-description">
+									Online saha rezervasyonu ve ödeme sistemi. Kullanıcılar istedikleri sahayı seçerek kolayca rezervasyon yapabilir ve güvenli ödeme işlemlerini gerçekleştirebilir.
+								</p>
+								<div class="project-tech">
+									<span class="tech-tag">Payment Gateway</span>
+									<span class="tech-tag">Real-time</span>
+								</div>
+								<div class="project-actions">
+									<button class="project-link modal-trigger">
+										<i class="fa fa-eye"></i> Detayları Gör
+									</button>
+								</div>
 							</div>
 						</div>
 
-						<div class="gallery-item" data-category="food">
-							<div class="gallery-card">
-								<a href="../assets/images/photo-gallery-03.jpg" data-lightbox="gallery-food">
-									<img src="../assets/images/photo-gallery-03.jpg" alt="Yemek 3" class="gallery-img">
-									<div class="gallery-overlay">
-										<h4>Modern Sunum</h4>
-										<p>Yaratıcı tabaklar</p>
-									</div>
-								</a>
+						<!-- GOvsAT - Tesis Yönetimi -->
+						<div class="project-card" 
+							 data-category="management"
+							 data-title="Tesis Yönetimi"
+							 data-description="Çoklu tesis ve saha yönetimi sistemi. Tesis sahipleri birden fazla tesisi tek panelden yönetebilir, saha durumlarını takip edebilir ve raporlama yapabilir. Merkezi yönetim paneli ile tüm operasyonları tek noktadan kontrol edebilirsiniz."
+							 data-image="../assets/images/photo-gallery-03.jpg"
+							 data-link="https://govsat.com.tr/"
+							 data-tech="Multi-tenant,Dashboard,Admin Panel,Real-time Monitoring"
+							 data-features="Çoklu Tesis Yönetimi,Merkezi Dashboard,Gerçek Zamanlı İzleme,Detaylı Raporlama,Admin Paneli,Otomatik Bildirimler">
+							<div class="project-image">
+								<img src="../assets/images/photo-gallery-03.jpg" alt="GOvsAT Tesis Yönetimi" class="project-img">
+								<div class="project-category">Yönetim Paneli</div>
+							</div>
+							<div class="project-content">
+								<h3 class="project-title">Tesis Yönetimi</h3>
+								<p class="project-description">
+									Çoklu tesis ve saha yönetimi sistemi. Tesis sahipleri birden fazla tesisi tek panelden yönetebilir, saha durumlarını takip edebilir ve raporlama yapabilir.
+								</p>
+								<div class="project-tech">
+									<span class="tech-tag">Multi-tenant</span>
+									<span class="tech-tag">Dashboard</span>
+								</div>
+								<div class="project-actions">
+									<button class="project-link modal-trigger">
+										<i class="fa fa-eye"></i> Detayları Gör
+									</button>
+								</div>
 							</div>
 						</div>
 
-						<!-- Restoran Kategorisi -->
-						<div class="gallery-item" data-category="restaurant">
-							<div class="gallery-card">
-								<a href="../assets/images/photo-gallery-04.jpg" data-lightbox="gallery-restaurant">
-									<img src="../assets/images/photo-gallery-04.jpg" alt="Restoran 1" class="gallery-img">
-									<div class="gallery-overlay">
-										<h4>Modern Tasarım</h4>
-										<p>Şık atmosfer</p>
-									</div>
-								</a>
+						<!-- Web Geliştirme Kategorisi -->
+						<div class="project-card" 
+							 data-category="web"
+							 data-title="Kurumsal Web Sitesi"
+							 data-description="Responsive ve modern tasarıma sahip kurumsal web sitesi. Mobil uyumlu, hızlı yüklenen ve SEO optimizasyonlu yapısıyla işletmenizin dijital varlığını güçlendirir. Modern tasarım prensipleri ve kullanıcı deneyimi odaklı yaklaşımla geliştirilmiştir."
+							 data-image="../assets/images/photo-gallery-04.jpg"
+							 data-link="../assets/images/photo-gallery-04.jpg"
+							 data-tech="HTML5,CSS3,JavaScript,jQuery,Bootstrap,SEO"
+							 data-features="Responsive Tasarım,SEO Optimizasyonu,Hızlı Yükleme,Mobil Uyumlu,Modern UI/UX,Cross-browser Uyumluluk">
+							<div class="project-image">
+								<img src="../assets/images/photo-gallery-04.jpg" alt="Kurumsal Web Sitesi" class="project-img">
+								<div class="project-category">Web Geliştirme</div>
+							</div>
+							<div class="project-content">
+								<h3 class="project-title">Kurumsal Web Sitesi</h3>
+								<p class="project-description">
+									Responsive ve modern tasarıma sahip kurumsal web sitesi. Mobil uyumlu, hızlı yüklenen ve SEO optimizasyonlu yapısıyla işletmenizin dijital varlığını güçlendirir.
+								</p>
+								<div class="project-tech">
+									<span class="tech-tag">HTML5</span>
+									<span class="tech-tag">CSS3</span>
+									<span class="tech-tag">JavaScript</span>
+								</div>
+								<div class="project-actions">
+									<button class="project-link modal-trigger">
+										<i class="fa fa-eye"></i> Detayları Gör
+									</button>
+								</div>
 							</div>
 						</div>
 
-						<div class="gallery-item" data-category="restaurant">
-							<div class="gallery-card">
-								<a href="../assets/images/photo-gallery-05.jpg" data-lightbox="gallery-restaurant">
-									<img src="../assets/images/photo-gallery-05.jpg" alt="Restoran 2" class="gallery-img">
-									<div class="gallery-overlay">
-										<h4>Rahat Ortam</h4>
-										<p>Konforlu mekan</p>
-									</div>
-								</a>
+						<!-- E-Ticaret Kategorisi -->
+						<div class="project-card" 
+							 data-category="ecommerce"
+							 data-title="E-Ticaret Platformu"
+							 data-description="Kapsamlı online satış ve ödeme sistemi. Ürün yönetimi, stok takibi, sipariş süreçleri ve güvenli ödeme entegrasyonları ile tam donanımlı e-ticaret çözümü. Modern tasarım ve kullanıcı dostu arayüz ile satış performansınızı artırır."
+							 data-image="../assets/images/photo-gallery-05.jpg"
+							 data-link="../assets/images/photo-gallery-05.jpg"
+							 data-tech="WooCommerce,Payment API,Stripe,PayPal,SSL,MySQL"
+							 data-features="Ürün Yönetimi,Stok Takibi,Sipariş Yönetimi,Güvenli Ödeme,Admin Paneli,SEO Optimizasyonu">
+							<div class="project-image">
+								<img src="../assets/images/photo-gallery-05.jpg" alt="E-Ticaret Platformu" class="project-img">
+								<div class="project-category">E-Ticaret</div>
+							</div>
+							<div class="project-content">
+								<h3 class="project-title">E-Ticaret Platformu</h3>
+								<p class="project-description">
+									Kapsamlı online satış ve ödeme sistemi. Ürün yönetimi, stok takibi, sipariş süreçleri ve güvenli ödeme entegrasyonları ile tam donanımlı e-ticaret çözümü.
+								</p>
+								<div class="project-tech">
+									<span class="tech-tag">WooCommerce</span>
+									<span class="tech-tag">Payment API</span>
+								</div>
+								<div class="project-actions">
+									<button class="project-link modal-trigger">
+										<i class="fa fa-eye"></i> Detayları Gör
+									</button>
+								</div>
 							</div>
 						</div>
 
-						<div class="gallery-item" data-category="restaurant">
-							<div class="gallery-card">
-								<a href="../assets/images/photo-gallery-06.jpg" data-lightbox="gallery-restaurant">
-									<img src="../assets/images/photo-gallery-06.jpg" alt="Restoran 3" class="gallery-img">
-									<div class="gallery-overlay">
-										<h4>Özel Köşeler</h4>
-										<p>Romantik atmosfer</p>
-									</div>
-								</a>
+						<!-- Mobil Uygulama Kategorisi -->
+						<div class="project-card" 
+							 data-category="mobile"
+							 data-title="Cross-Platform App"
+							 data-description="React Native ile geliştirilmiş cross-platform mobil uygulama. iOS ve Android platformlarında aynı kod tabanıyla çalışan, performanslı ve kullanıcı dostu mobil çözüm. Native performans ve modern UI/UX tasarımı ile kullanıcı deneyimini maksimize eder."
+							 data-image="../assets/images/photo-gallery-06.jpg"
+							 data-link="../assets/images/photo-gallery-06.jpg"
+							 data-tech="React Native,iOS,Android,JavaScript,Redux,Firebase"
+							 data-features="Cross-Platform Uyumluluk,Native Performans,Modern UI/UX,Offline Çalışma,Push Notifications,App Store Optimizasyonu">
+							<div class="project-image">
+								<img src="../assets/images/photo-gallery-06.jpg" alt="Mobil Uygulama" class="project-img">
+								<div class="project-category">Mobil Uygulama</div>
+							</div>
+							<div class="project-content">
+								<h3 class="project-title">Cross-Platform App</h3>
+								<p class="project-description">
+									React Native ile geliştirilmiş cross-platform mobil uygulama. iOS ve Android platformlarında aynı kod tabanıyla çalışan, performanslı ve kullanıcı dostu mobil çözüm.
+								</p>
+								<div class="project-tech">
+									<span class="tech-tag">React Native</span>
+									<span class="tech-tag">iOS/Android</span>
+								</div>
+								<div class="project-actions">
+									<button class="project-link modal-trigger">
+										<i class="fa fa-eye"></i> Detayları Gör
+									</button>
+								</div>
 							</div>
 						</div>
 
-						<!-- Şef Kategorisi -->
-						<div class="gallery-item" data-category="chef">
-							<div class="gallery-card">
-								<a href="../assets/images/photo-gallery-07.jpg" data-lightbox="gallery-chef">
-									<img src="../assets/images/photo-gallery-07.jpg" alt="Şef 1" class="gallery-img">
-									<div class="gallery-overlay">
-										<h4>Usta Şefler</h4>
-										<p>Deneyimli mutfak ekibi</p>
-									</div>
-								</a>
+						<!-- Web Geliştirme Kategorisi -->
+						<div class="project-card" data-category="web">
+							<div class="project-image">
+								<img src="../assets/images/photo-gallery-07.jpg" alt="Web Uygulaması" class="project-img">
+								<div class="project-category">Web Geliştirme</div>
+							</div>
+							<div class="project-content">
+								<h3 class="project-title">Web Uygulaması</h3>
+								<p class="project-description">
+									Modern web teknolojileri ile geliştirilmiş dinamik içerik yönetim sistemi. Kullanıcı dostu arayüz ve güçlü backend altyapısı ile ölçeklenebilir web çözümü.
+								</p>
+								<div class="project-tech">
+									<span class="tech-tag">React</span>
+									<span class="tech-tag">Node.js</span>
+								</div>
+								<div class="project-actions">
+									<a href="../assets/images/photo-gallery-07.jpg" data-lightbox="gallery-web" class="project-link">
+										<i class="fa fa-eye"></i> Projeyi İncele
+									</a>
+								</div>
 							</div>
 						</div>
 
-						<!-- Etkinlikler Kategorisi -->
-						<div class="gallery-item" data-category="events">
-							<div class="gallery-card">
-								<a href="../assets/images/photo-gallery-08.jpg" data-lightbox="gallery-events">
-									<img src="../assets/images/photo-gallery-08.jpg" alt="Etkinlik 1" class="gallery-img">
-									<div class="gallery-overlay">
-										<h4>Özel Etkinlikler</h4>
-										<p>Unutulmaz anlar</p>
-									</div>
-								</a>
+						<!-- Yapay Zeka Kategorisi -->
+						<div class="project-card" 
+							 data-category="ai"
+							 data-title="Chatbot Sistemi"
+							 data-description="Doğal dil işleme teknolojileri kullanılarak geliştirilmiş akıllı chatbot sistemi. Müşteri hizmetlerini otomatikleştirerek 7/24 destek sağlar ve müşteri memnuniyetini artırır. Makine öğrenmesi algoritmaları ile sürekli öğrenen ve gelişen yapay zeka çözümü."
+							 data-image="../assets/images/photo-gallery-08.jpg"
+							 data-link="../assets/images/photo-gallery-08.jpg"
+							 data-tech="Python,NLP,OpenAI,Transformers,Flask,PostgreSQL"
+							 data-features="Doğal Dil İşleme,Makine Öğrenmesi,7/24 Destek,Çoklu Dil Desteği,Öğrenen Sistem,API Entegrasyonu">
+							<div class="project-image">
+								<img src="../assets/images/photo-gallery-08.jpg" alt="AI Projesi" class="project-img">
+								<div class="project-category">Yapay Zeka</div>
+							</div>
+							<div class="project-content">
+								<h3 class="project-title">Chatbot Sistemi</h3>
+								<p class="project-description">
+									Doğal dil işleme teknolojileri kullanılarak geliştirilmiş akıllı chatbot sistemi. Müşteri hizmetlerini otomatikleştirerek 7/24 destek sağlar ve müşteri memnuniyetini artırır.
+								</p>
+								<div class="project-tech">
+									<span class="tech-tag">Python</span>
+									<span class="tech-tag">NLP</span>
+								</div>
+								<div class="project-actions">
+									<button class="project-link modal-trigger">
+										<i class="fa fa-eye"></i> Detayları Gör
+									</button>
+								</div>
 							</div>
 						</div>
 
-						<div class="gallery-item" data-category="events">
-							<div class="gallery-card">
-								<a href="../assets/images/photo-gallery-09.jpg" data-lightbox="gallery-events">
-									<img src="../assets/images/photo-gallery-09.jpg" alt="Etkinlik 2" class="gallery-img">
-									<div class="gallery-overlay">
-										<h4>Kutlamalar</h4>
-										<p>Özel günler</p>
-									</div>
-								</a>
+						<!-- E-Ticaret Kategorisi -->
+						<div class="project-card" 
+							 data-category="ecommerce"
+							 data-title="E-Ticaret Sitesi"
+							 data-description="Modern ve kullanıcı dostu tasarıma sahip online mağaza. Özel tema geliştirme ve Shopify entegrasyonu ile güçlü e-ticaret platformu çözümü. Yüksek dönüşüm oranları ve kullanıcı deneyimi odaklı tasarım ile satış performansınızı artırır."
+							 data-image="../assets/images/photo-gallery-09.jpg"
+							 data-link="../assets/images/photo-gallery-09.jpg"
+							 data-tech="Shopify,Custom Theme,Liquid,JavaScript,API Integration"
+							 data-features="Özel Tema Tasarımı,Shopify Entegrasyonu,Yüksek Dönüşüm Oranı,Mobil Optimizasyon,SEO Dostu,Analitik Entegrasyonu">
+							<div class="project-image">
+								<img src="../assets/images/photo-gallery-09.jpg" alt="E-Ticaret Sitesi" class="project-img">
+								<div class="project-category">E-Ticaret</div>
+							</div>
+							<div class="project-content">
+								<h3 class="project-title">E-Ticaret Sitesi</h3>
+								<p class="project-description">
+									Modern ve kullanıcı dostu tasarıma sahip online mağaza. Özel tema geliştirme ve Shopify entegrasyonu ile güçlü e-ticaret platformu çözümü.
+								</p>
+								<div class="project-tech">
+									<span class="tech-tag">Shopify</span>
+									<span class="tech-tag">Custom Theme</span>
+								</div>
+								<div class="project-actions">
+									<button class="project-link modal-trigger">
+										<i class="fa fa-eye"></i> Detayları Gör
+									</button>
+								</div>
 							</div>
 						</div>
 
-						<div class="gallery-item" data-category="events">
-							<div class="gallery-card">
-								<a href="../assets/images/photo-gallery-10.jpg" data-lightbox="gallery-events">
-									<img src="../assets/images/photo-gallery-10.jpg" alt="Etkinlik 3" class="gallery-img">
-									<div class="gallery-overlay">
-										<h4>Canlı Müzik</h4>
-										<p>Eğlenceli geceler</p>
-									</div>
-								</a>
+						<!-- Mobil Uygulama Kategorisi -->
+						<div class="project-card" 
+							 data-category="mobile"
+							 data-title="iOS Uygulaması"
+							 data-description="Native iOS geliştirme ile oluşturulmuş performanslı mobil uygulama. Swift ve UIKit kullanılarak geliştirilen, App Store standartlarına uygun profesyonel mobil çözüm. Apple'ın tasarım prensiplerine uygun, kullanıcı dostu arayüz ile mükemmel kullanıcı deneyimi sunar."
+							 data-image="../assets/images/photo-gallery-10.jpg"
+							 data-link="../assets/images/photo-gallery-10.jpg"
+							 data-tech="Swift,UIKit,Core Data,AVFoundation,Core Location"
+							 data-features="Native iOS Performansı,App Store Uyumluluğu,Modern UI/UX,Offline Çalışma,Push Notifications,Core Data Entegrasyonu">
+							<div class="project-image">
+								<img src="../assets/images/photo-gallery-10.jpg" alt="iOS Uygulaması" class="project-img">
+								<div class="project-category">Mobil Uygulama</div>
+							</div>
+							<div class="project-content">
+								<h3 class="project-title">iOS Uygulaması</h3>
+								<p class="project-description">
+									Native iOS geliştirme ile oluşturulmuş performanslı mobil uygulama. Swift ve UIKit kullanılarak geliştirilen, App Store standartlarına uygun profesyonel mobil çözüm.
+								</p>
+								<div class="project-tech">
+									<span class="tech-tag">Swift</span>
+									<span class="tech-tag">UIKit</span>
+								</div>
+								<div class="project-actions">
+									<button class="project-link modal-trigger">
+										<i class="fa fa-eye"></i> Detayları Gör
+									</button>
+								</div>
 							</div>
 						</div>
 
-						<div class="gallery-item" data-category="chef">
-							<div class="gallery-card">
-								<a href="../assets/images/photo-gallery-11.jpg" data-lightbox="gallery-chef">
-									<img src="../assets/images/photo-gallery-11.jpg" alt="Şef 2" class="gallery-img">
-									<div class="gallery-overlay">
-										<h4>Mutfak Ekibi</h4>
-										<p>Profesyonel çalışma</p>
-									</div>
-								</a>
+						<!-- Web Geliştirme Kategorisi -->
+						<div class="project-card" 
+							 data-category="web"
+							 data-title="Portfolio Sitesi"
+							 data-description="Modern ve etkileyici kişisel portfolyo tasarımı. Vue.js ve SCSS kullanılarak geliştirilmiş, responsive ve interaktif portfolyo web sitesi çözümü. Animasyonlar ve geçişlerle zenginleştirilmiş, kullanıcı deneyimi odaklı tasarım."
+							 data-image="../assets/images/photo-gallery-11.jpg"
+							 data-link="../assets/images/photo-gallery-11.jpg"
+							 data-tech="Vue.js,SCSS,JavaScript,Webpack,GSAP"
+							 data-features="Modern Tasarım,Responsive Layout,Animasyonlar,Interaktif Öğeler,SEO Optimizasyonu,Performans Optimizasyonu">
+							<div class="project-image">
+								<img src="../assets/images/photo-gallery-11.jpg" alt="Portfolio Sitesi" class="project-img">
+								<div class="project-category">Web Geliştirme</div>
+							</div>
+							<div class="project-content">
+								<h3 class="project-title">Portfolio Sitesi</h3>
+								<p class="project-description">
+									Modern ve etkileyici kişisel portfolyo tasarımı. Vue.js ve SCSS kullanılarak geliştirilmiş, responsive ve interaktif portfolyo web sitesi çözümü.
+								</p>
+								<div class="project-tech">
+									<span class="tech-tag">Vue.js</span>
+									<span class="tech-tag">SCSS</span>
+								</div>
+								<div class="project-actions">
+									<button class="project-link modal-trigger">
+										<i class="fa fa-eye"></i> Detayları Gör
+									</button>
+								</div>
 							</div>
 						</div>
 
-						<div class="gallery-item" data-category="food">
-							<div class="gallery-card">
-								<a href="../assets/images/photo-gallery-12.jpg" data-lightbox="gallery-food">
-									<img src="../assets/images/photo-gallery-12.jpg" alt="Yemek 4" class="gallery-img">
-									<div class="gallery-overlay">
-										<h4>Tatlılar</h4>
-										<p>Özel tatlılarımız</p>
-									</div>
-								</a>
+						<!-- Yapay Zeka Kategorisi -->
+						<div class="project-card" 
+							 data-category="ai"
+							 data-title="Makine Öğrenmesi"
+							 data-description="TensorFlow ve Python kullanılarak geliştirilmiş veri analizi ve tahmin modeli. Büyük veri setlerini analiz ederek gelecekteki trendleri öngören akıllı sistem. Derin öğrenme algoritmaları ile yüksek doğruluk oranında tahminler yapabilen gelişmiş AI çözümü."
+							 data-image="../assets/images/photo-gallery-12.jpg"
+							 data-link="../assets/images/photo-gallery-12.jpg"
+							 data-tech="TensorFlow,Python,Scikit-learn,Pandas,NumPy,Matplotlib"
+							 data-features="Veri Analizi,Tahmin Modelleri,Derin Öğrenme,Büyük Veri İşleme,Otomatik Öğrenme,Model Optimizasyonu">
+							<div class="project-image">
+								<img src="../assets/images/photo-gallery-12.jpg" alt="Makine Öğrenmesi" class="project-img">
+								<div class="project-category">Yapay Zeka</div>
+							</div>
+							<div class="project-content">
+								<h3 class="project-title">Makine Öğrenmesi</h3>
+								<p class="project-description">
+									TensorFlow ve Python kullanılarak geliştirilmiş veri analizi ve tahmin modeli. Büyük veri setlerini analiz ederek gelecekteki trendleri öngören akıllı sistem.
+								</p>
+								<div class="project-tech">
+									<span class="tech-tag">TensorFlow</span>
+									<span class="tech-tag">Python</span>
+								</div>
+								<div class="project-actions">
+									<button class="project-link modal-trigger">
+										<i class="fa fa-eye"></i> Detayları Gör
+									</button>
+								</div>
 							</div>
 						</div>
 
-						<div class="gallery-item" data-category="restaurant">
-							<div class="gallery-card">
-								<a href="../assets/images/photo-gallery-13.jpg" data-lightbox="gallery-restaurant">
-									<img src="../assets/images/photo-gallery-13.jpg" alt="Restoran 4" class="gallery-img">
-									<div class="gallery-overlay">
-										<h4>Bar Alanı</h4>
-										<p>İçecek köşesi</p>
-									</div>
-								</a>
+						<!-- E-Ticaret Kategorisi -->
+						<div class="project-card" 
+							 data-category="ecommerce"
+							 data-title="B2B Platform"
+							 data-description="İşletmeler arası ticaret için geliştirilmiş kapsamlı platform. Laravel ve API teknolojileri kullanılarak oluşturulan, güvenli ve ölçeklenebilir B2B e-ticaret çözümü. Kurumsal ihtiyaçlara özel geliştirilmiş, yüksek güvenlik standartlarına sahip profesyonel platform."
+							 data-image="../assets/images/photo-gallery-13.jpg"
+							 data-link="../assets/images/photo-gallery-13.jpg"
+							 data-tech="Laravel,API,MySQL,Redis,Elasticsearch,JWT"
+							 data-features="B2B Ticaret,API Entegrasyonu,Güvenli Ödeme,Kurumsal Yönetim,Toplu Sipariş,Detaylı Raporlama">
+							<div class="project-image">
+								<img src="../assets/images/photo-gallery-13.jpg" alt="B2B Platform" class="project-img">
+								<div class="project-category">E-Ticaret</div>
+							</div>
+							<div class="project-content">
+								<h3 class="project-title">B2B Platform</h3>
+								<p class="project-description">
+									İşletmeler arası ticaret için geliştirilmiş kapsamlı platform. Laravel ve API teknolojileri kullanılarak oluşturulan, güvenli ve ölçeklenebilir B2B e-ticaret çözümü.
+								</p>
+								<div class="project-tech">
+									<span class="tech-tag">Laravel</span>
+									<span class="tech-tag">API</span>
+								</div>
+								<div class="project-actions">
+									<button class="project-link modal-trigger">
+										<i class="fa fa-eye"></i> Detayları Gör
+									</button>
+								</div>
 							</div>
 						</div>
 
-						<div class="gallery-item" data-category="events">
-							<div class="gallery-card">
-								<a href="../assets/images/photo-gallery-14.jpg" data-lightbox="gallery-events">
-									<img src="../assets/images/photo-gallery-14.jpg" alt="Etkinlik 4" class="gallery-img">
-									<div class="gallery-overlay">
-										<h4>Düğün Organizasyonu</h4>
-										<p>Özel günler</p>
-									</div>
-								</a>
+						<!-- Mobil Uygulama Kategorisi -->
+						<div class="project-card" 
+							 data-category="mobile"
+							 data-title="Android Uygulaması"
+							 data-description="Native Android geliştirme ile oluşturulmuş performanslı mobil uygulama. Kotlin ve Jetpack kullanılarak geliştirilen, modern Android standartlarına uygun mobil çözüm. Material Design prensiplerine uygun, kullanıcı dostu arayüz ile mükemmel Android deneyimi sunar."
+							 data-image="../assets/images/photo-gallery-14.jpg"
+							 data-link="../assets/images/photo-gallery-14.jpg"
+							 data-tech="Kotlin,Jetpack,Android SDK,Room Database,Retrofit"
+							 data-features="Native Android Performansı,Material Design,Offline Çalışma,Push Notifications,Database Entegrasyonu,Modern UI/UX">
+							<div class="project-image">
+								<img src="../assets/images/photo-gallery-14.jpg" alt="Android Uygulaması" class="project-img">
+								<div class="project-category">Mobil Uygulama</div>
+							</div>
+							<div class="project-content">
+								<h3 class="project-title">Android Uygulaması</h3>
+								<p class="project-description">
+									Native Android geliştirme ile oluşturulmuş performanslı mobil uygulama. Kotlin ve Jetpack kullanılarak geliştirilen, modern Android standartlarına uygun mobil çözüm.
+								</p>
+								<div class="project-tech">
+									<span class="tech-tag">Kotlin</span>
+									<span class="tech-tag">Jetpack</span>
+								</div>
+								<div class="project-actions">
+									<button class="project-link modal-trigger">
+										<i class="fa fa-eye"></i> Detayları Gör
+									</button>
+								</div>
 							</div>
 						</div>
 
-						<div class="gallery-item" data-category="food">
-							<div class="gallery-card">
-								<a href="../assets/images/photo-gallery-15.jpg" data-lightbox="gallery-food">
-									<img src="../assets/images/photo-gallery-15.jpg" alt="Yemek 5" class="gallery-img">
-									<div class="gallery-overlay">
-										<h4>Kahvaltı</h4>
-										<p>Güne başlangıç</p>
-									</div>
-								</a>
+						<!-- Web Geliştirme Kategorisi -->
+						<div class="project-card" 
+							 data-category="web"
+							 data-title="Blog Sitesi"
+							 data-description="WordPress tabanlı içerik yönetim sistemi. Özel tema geliştirme ve SEO optimizasyonu ile güçlü blog platformu çözümü. Yazar dostu arayüz ve güçlü içerik yönetimi özellikleri ile profesyonel blog deneyimi sunar."
+							 data-image="../assets/images/photo-gallery-15.jpg"
+							 data-link="../assets/images/photo-gallery-15.jpg"
+							 data-tech="WordPress,Custom Theme,PHP,MySQL,SEO,Plugins"
+							 data-features="İçerik Yönetimi,SEO Optimizasyonu,Özel Tema,Responsive Tasarım,Yazar Paneli,Analitik Entegrasyonu">
+							<div class="project-image">
+								<img src="../assets/images/photo-gallery-15.jpg" alt="Blog Sitesi" class="project-img">
+								<div class="project-category">Web Geliştirme</div>
+							</div>
+							<div class="project-content">
+								<h3 class="project-title">Blog Sitesi</h3>
+								<p class="project-description">
+									WordPress tabanlı içerik yönetim sistemi. Özel tema geliştirme ve SEO optimizasyonu ile güçlü blog platformu çözümü.
+								</p>
+								<div class="project-tech">
+									<span class="tech-tag">WordPress</span>
+									<span class="tech-tag">Custom Theme</span>
+								</div>
+								<div class="project-actions">
+									<button class="project-link modal-trigger">
+										<i class="fa fa-eye"></i> Detayları Gör
+									</button>
+								</div>
 							</div>
 						</div>
 
-						<div class="gallery-item" data-category="restaurant">
-							<div class="gallery-card">
-								<a href="../assets/images/photo-gallery-16.jpg" data-lightbox="gallery-restaurant">
-									<img src="../assets/images/photo-gallery-16.jpg" alt="Restoran 5" class="gallery-img">
-									<div class="gallery-overlay">
-										<h4>Bahçe</h4>
-										<p>Doğal ortam</p>
-									</div>
-								</a>
+						<!-- Yapay Zeka Kategorisi -->
+						<div class="project-card" 
+							 data-category="ai"
+							 data-title="Görüntü İşleme"
+							 data-description="OpenCV ve Python kullanılarak geliştirilmiş computer vision projesi. Görüntü analizi, nesne tanıma ve görsel veri işleme konularında gelişmiş çözümler sunar. Derin öğrenme modelleri ile yüksek doğruluk oranında görüntü analizi yapabilen gelişmiş AI çözümü."
+							 data-image="../assets/images/photo-gallery-16.jpg"
+							 data-link="../assets/images/photo-gallery-16.jpg"
+							 data-tech="OpenCV,Python,TensorFlow,Computer Vision,Deep Learning"
+							 data-features="Görüntü Analizi,Nesne Tanıma,Derin Öğrenme,Real-time İşleme,API Entegrasyonu,Otomatik Sınıflandırma">
+							<div class="project-image">
+								<img src="../assets/images/photo-gallery-16.jpg" alt="Görüntü İşleme" class="project-img">
+								<div class="project-category">Yapay Zeka</div>
+							</div>
+							<div class="project-content">
+								<h3 class="project-title">Görüntü İşleme</h3>
+								<p class="project-description">
+									OpenCV ve Python kullanılarak geliştirilmiş computer vision projesi. Görüntü analizi, nesne tanıma ve görsel veri işleme konularında gelişmiş çözümler sunar.
+								</p>
+								<div class="project-tech">
+									<span class="tech-tag">OpenCV</span>
+									<span class="tech-tag">Python</span>
+								</div>
+								<div class="project-actions">
+									<button class="project-link modal-trigger">
+										<i class="fa fa-eye"></i> Detayları Gör
+									</button>
+								</div>
 							</div>
 						</div>
 
-						<div class="gallery-item" data-category="chef">
-							<div class="gallery-card">
-								<a href="../assets/images/photo-gallery-17.jpg" data-lightbox="gallery-chef">
-									<img src="../assets/images/photo-gallery-17.jpg" alt="Şef 3" class="gallery-img">
-									<div class="gallery-overlay">
-										<h4>Mutfak Sırları</h4>
-										<p>Özel teknikler</p>
-									</div>
-								</a>
+						<!-- E-Ticaret Kategorisi -->
+						<div class="project-card" 
+							 data-category="ecommerce"
+							 data-title="Marketplace"
+							 data-description="Çoklu satıcı platformu. Django ve PostgreSQL kullanılarak geliştirilmiş, ölçeklenebilir ve güvenli marketplace çözümü. Satıcı ve alıcıları buluşturan, güvenli ödeme ve kargo entegrasyonları ile tam donanımlı e-ticaret platformu."
+							 data-image="../assets/images/photo-gallery-17.jpg"
+							 data-link="../assets/images/photo-gallery-17.jpg"
+							 data-tech="Django,PostgreSQL,Redis,Celery,Stripe,Elasticsearch"
+							 data-features="Çoklu Satıcı,Ödeme Entegrasyonu,Kargo Takibi,Satıcı Paneli,Admin Yönetimi,Analitik Dashboard">
+							<div class="project-image">
+								<img src="../assets/images/photo-gallery-17.jpg" alt="Marketplace" class="project-img">
+								<div class="project-category">E-Ticaret</div>
+							</div>
+							<div class="project-content">
+								<h3 class="project-title">Marketplace</h3>
+								<p class="project-description">
+									Çoklu satıcı platformu. Django ve PostgreSQL kullanılarak geliştirilmiş, ölçeklenebilir ve güvenli marketplace çözümü.
+								</p>
+								<div class="project-tech">
+									<span class="tech-tag">Django</span>
+									<span class="tech-tag">PostgreSQL</span>
+								</div>
+								<div class="project-actions">
+									<button class="project-link modal-trigger">
+										<i class="fa fa-eye"></i> Detayları Gör
+									</button>
+								</div>
 							</div>
 						</div>
 
-						<div class="gallery-item" data-category="events">
-							<div class="gallery-card">
-								<a href="../assets/images/photo-gallery-18.jpg" data-lightbox="gallery-events">
-									<img src="../assets/images/photo-gallery-18.jpg" alt="Etkinlik 5" class="gallery-img">
-									<div class="gallery-overlay">
-										<h4>İş Toplantıları</h4>
-										<p>Profesyonel ortam</p>
-									</div>
-								</a>
+						<!-- Web Geliştirme Kategorisi -->
+						<div class="project-card" 
+							 data-category="web"
+							 data-title="REST API"
+							 data-description="Mikroservis mimarisi ile geliştirilmiş REST API. Express.js ve MongoDB kullanılarak oluşturulan, yüksek performanslı ve ölçeklenebilir API çözümü. JWT authentication, rate limiting ve comprehensive documentation ile profesyonel API hizmeti sunar."
+							 data-image="../assets/images/photo-gallery-18.jpg"
+							 data-link="../assets/images/photo-gallery-18.jpg"
+							 data-tech="Express.js,MongoDB,Node.js,JWT,Swagger,Redis"
+							 data-features="RESTful API,Mikroservis Mimarisi,JWT Authentication,Rate Limiting,API Documentation,High Performance">
+							<div class="project-image">
+								<img src="../assets/images/photo-gallery-18.jpg" alt="API Projesi" class="project-img">
+								<div class="project-category">Web Geliştirme</div>
+							</div>
+							<div class="project-content">
+								<h3 class="project-title">REST API</h3>
+								<p class="project-description">
+									Mikroservis mimarisi ile geliştirilmiş REST API. Express.js ve MongoDB kullanılarak oluşturulan, yüksek performanslı ve ölçeklenebilir API çözümü.
+								</p>
+								<div class="project-tech">
+									<span class="tech-tag">Express.js</span>
+									<span class="tech-tag">MongoDB</span>
+								</div>
+								<div class="project-actions">
+									<button class="project-link modal-trigger">
+										<i class="fa fa-eye"></i> Detayları Gör
+									</button>
+								</div>
 							</div>
 						</div>
 
-						<div class="gallery-item" data-category="food">
-							<div class="gallery-card">
-								<a href="../assets/images/photo-gallery-19.jpg" data-lightbox="gallery-food">
-									<img src="../assets/images/photo-gallery-19.jpg" alt="Yemek 6" class="gallery-img">
-									<div class="gallery-overlay">
-										<h4>Ana Yemekler</h4>
-										<p>Doyurucu lezzetler</p>
-									</div>
-								</a>
+						<!-- Mobil Uygulama Kategorisi -->
+						<div class="project-card" 
+							 data-category="mobile"
+							 data-title="Flutter Uygulaması"
+							 data-description="Flutter ve Dart kullanılarak geliştirilmiş cross-platform mobil uygulama. Tek kod tabanıyla iOS ve Android platformlarında çalışan, performanslı ve modern mobil çözüm. Material Design ve Cupertino tasarım sistemleri ile platform-specific UI/UX deneyimi sunar."
+							 data-image="../assets/images/photo-gallery-19.jpg"
+							 data-link="../assets/images/photo-gallery-19.jpg"
+							 data-tech="Flutter,Dart,Firebase,Provider,BLoC,SQLite"
+							 data-features="Cross-Platform Uyumluluk,Material Design,State Management,Offline Çalışma,Firebase Entegrasyonu,Hot Reload">
+							<div class="project-image">
+								<img src="../assets/images/photo-gallery-19.jpg" alt="Flutter Uygulaması" class="project-img">
+								<div class="project-category">Mobil Uygulama</div>
+							</div>
+							<div class="project-content">
+								<h3 class="project-title">Flutter Uygulaması</h3>
+								<p class="project-description">
+									Flutter ve Dart kullanılarak geliştirilmiş cross-platform mobil uygulama. Tek kod tabanıyla iOS ve Android platformlarında çalışan, performanslı ve modern mobil çözüm.
+								</p>
+								<div class="project-tech">
+									<span class="tech-tag">Flutter</span>
+									<span class="tech-tag">Dart</span>
+								</div>
+								<div class="project-actions">
+									<button class="project-link modal-trigger">
+										<i class="fa fa-eye"></i> Detayları Gör
+									</button>
+								</div>
 							</div>
 						</div>
 
-						<div class="gallery-item" data-category="restaurant">
-							<div class="gallery-card">
-								<a href="../assets/images/photo-gallery-20.jpg" data-lightbox="gallery-restaurant">
-									<img src="../assets/images/photo-gallery-20.jpg" alt="Restoran 6" class="gallery-img">
-									<div class="gallery-overlay">
-										<h4>VIP Salon</h4>
-										<p>Özel misafirler</p>
-									</div>
-								</a>
+						<!-- Yapay Zeka Kategorisi -->
+						<div class="project-card" 
+							 data-category="ai"
+							 data-title="Doğal Dil İşleme"
+							 data-description="NLTK ve spaCy kütüphaneleri kullanılarak geliştirilmiş metin analizi ve sınıflandırma sistemi. Büyük metin verilerini analiz ederek anlamlı çıkarımlar yapar. Sentiment analysis, named entity recognition ve text classification gibi gelişmiş NLP özellikleri ile kapsamlı metin işleme çözümü sunar."
+							 data-image="../assets/images/photo-gallery-20.jpg"
+							 data-link="../assets/images/photo-gallery-20.jpg"
+							 data-tech="NLTK,spaCy,Python,Transformers,BERT,Scikit-learn"
+							 data-features="Metin Analizi,Sentiment Analysis,Named Entity Recognition,Text Classification,Çoklu Dil Desteği,API Entegrasyonu">
+							<div class="project-image">
+								<img src="../assets/images/photo-gallery-20.jpg" alt="Doğal Dil İşleme" class="project-img">
+								<div class="project-category">Yapay Zeka</div>
+							</div>
+							<div class="project-content">
+								<h3 class="project-title">Doğal Dil İşleme</h3>
+								<p class="project-description">
+									NLTK ve spaCy kütüphaneleri kullanılarak geliştirilmiş metin analizi ve sınıflandırma sistemi. Büyük metin verilerini analiz ederek anlamlı çıkarımlar yapar.
+								</p>
+								<div class="project-tech">
+									<span class="tech-tag">NLTK</span>
+									<span class="tech-tag">spaCy</span>
+								</div>
+								<div class="project-actions">
+									<button class="project-link modal-trigger">
+										<i class="fa fa-eye"></i> Detayları Gör
+									</button>
+								</div>
 							</div>
 						</div>
 
-						<div class="gallery-item" data-category="chef">
-							<div class="gallery-card">
-								<a href="../assets/images/photo-gallery-21.jpg" data-lightbox="gallery-chef">
-									<img src="../assets/images/photo-gallery-21.jpg" alt="Şef 4" class="gallery-img">
-									<div class="gallery-overlay">
-										<h4>Usta Eller</h4>
-										<p>Sanat eseri yemekler</p>
-									</div>
-								</a>
+						<!-- Web Geliştirme Kategorisi -->
+						<div class="project-card" 
+							 data-category="web"
+							 data-title="Progressive Web App"
+							 data-description="Service Worker teknolojisi kullanılarak geliştirilmiş offline çalışan web uygulaması. Mobil uygulama deneyimi sunan, hızlı ve güvenilir PWA çözümü. App-like experience ile native uygulama performansında web tabanlı çözüm sunar."
+							 data-image="../assets/images/photo-gallery-21.jpg"
+							 data-link="../assets/images/photo-gallery-21.jpg"
+							 data-tech="PWA,Service Worker,Web App Manifest,IndexedDB,Cache API"
+							 data-features="Offline Çalışma,App-like Experience,Push Notifications,Responsive Design,Fast Loading,Installable">
+							<div class="project-image">
+								<img src="../assets/images/photo-gallery-21.jpg" alt="Progressive Web App" class="project-img">
+								<div class="project-category">Web Geliştirme</div>
+							</div>
+							<div class="project-content">
+								<h3 class="project-title">Progressive Web App</h3>
+								<p class="project-description">
+									Service Worker teknolojisi kullanılarak geliştirilmiş offline çalışan web uygulaması. Mobil uygulama deneyimi sunan, hızlı ve güvenilir PWA çözümü.
+								</p>
+								<div class="project-tech">
+									<span class="tech-tag">PWA</span>
+									<span class="tech-tag">Service Worker</span>
+								</div>
+								<div class="project-actions">
+									<button class="project-link modal-trigger">
+										<i class="fa fa-eye"></i> Detayları Gör
+									</button>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -342,6 +742,50 @@
 			</div>
 		</div>
 	</section>
+
+	<!-- Project Modal -->
+	<div class="project-modal" id="projectModal">
+		<div class="modal-overlay" id="modalOverlay"></div>
+		<div class="modal-container">
+			<div class="modal-header">
+				<h2 class="modal-title" id="modalTitle">Proje Detayları</h2>
+				<button class="modal-close" id="modalClose">
+					<i class="fa fa-times"></i>
+				</button>
+			</div>
+			<div class="modal-content">
+				<div class="modal-image">
+					<img id="modalImage" src="" alt="Proje Görseli">
+					<div class="modal-category" id="modalCategory">Kategori</div>
+				</div>
+				<div class="modal-details">
+					<div class="modal-description" id="modalDescription">
+						Proje açıklaması burada görünecek...
+					</div>
+					<div class="modal-tech-stack">
+						<h4>Kullanılan Teknolojiler</h4>
+						<div class="tech-list" id="modalTechList">
+							<!-- Teknoloji etiketleri burada görünecek -->
+						</div>
+					</div>
+					<div class="modal-features">
+						<h4>Proje Özellikleri</h4>
+						<ul class="features-list" id="modalFeatures">
+							<!-- Özellikler burada görünecek -->
+						</ul>
+					</div>
+					<div class="modal-actions">
+						<a href="#" class="modal-link" id="modalLink" target="_blank">
+							<i class="fa fa-external-link"></i> Projeyi İncele
+						</a>
+						<button class="modal-close-btn" id="modalCloseBtn">
+							<i class="fa fa-times"></i> Kapat
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<!-- Back to top -->
 	<div class="btn-back-to-top bg0-hov" id="myBtn">
@@ -353,14 +797,23 @@
 	<!-- Footer Component Container -->
 	<div id="footer-container"></div>
 
-	<!-- Gallery Filter JavaScript -->
+	<!-- Enhanced Project Filter JavaScript -->
 	<script>
 		document.addEventListener('DOMContentLoaded', function() {
 			const filterButtons = document.querySelectorAll('.gallery-filter-btn');
-			const galleryItems = document.querySelectorAll('.gallery-item');
+			const projectCards = document.querySelectorAll('.project-card');
+			const projectsContainer = document.getElementById('projects-container');
+			const loadingElement = document.getElementById('projects-loading');
 			
+			// Initialize counters
+			updateCounters();
+			
+			// Add click event listeners to filter buttons
 			filterButtons.forEach(button => {
 				button.addEventListener('click', function() {
+					// Prevent multiple rapid clicks
+					if (projectsContainer.classList.contains('filtering')) return;
+					
 					// Remove active class from all buttons
 					filterButtons.forEach(btn => btn.classList.remove('active'));
 					// Add active class to clicked button
@@ -368,16 +821,196 @@
 					
 					const filter = this.getAttribute('data-filter');
 					
-					galleryItems.forEach(item => {
-						if (filter === 'all' || item.getAttribute('data-category') === filter) {
-							item.classList.remove('hidden');
-						} else {
-							item.classList.add('hidden');
-						}
-					});
+					// Show loading effect
+					showLoading();
+					
+					// Filter projects with animation
+					setTimeout(() => {
+						filterProjects(filter);
+						hideLoading();
+					}, 300);
 				});
 			});
+			
+			function showLoading() {
+				projectsContainer.classList.add('filtering');
+				loadingElement.classList.add('show');
+			}
+			
+			function hideLoading() {
+				setTimeout(() => {
+					projectsContainer.classList.remove('filtering');
+					loadingElement.classList.remove('show');
+				}, 200);
+			}
+			
+			function filterProjects(filter) {
+				let visibleCount = 0;
+				
+				projectCards.forEach((card, index) => {
+					const category = card.getAttribute('data-category');
+					const shouldShow = filter === 'all' || category === filter;
+					
+					// Add staggered delay for smooth animation
+					setTimeout(() => {
+						if (shouldShow) {
+							card.classList.remove('hidden');
+							visibleCount++;
+						} else {
+							card.classList.add('hidden');
+						}
+					}, index * 50);
+				});
+				
+				// Update counter for current filter
+				updateCurrentFilterCounter(filter, visibleCount);
+			}
+			
+			function updateCounters() {
+				const categories = ['all', 'web', 'mobile', 'ecommerce', 'management', 'ai'];
+				
+				categories.forEach(category => {
+					const count = category === 'all' 
+						? projectCards.length 
+						: document.querySelectorAll(`[data-category="${category}"]`).length;
+					
+					const counterElement = document.getElementById(`count-${category}`);
+					if (counterElement) {
+						counterElement.textContent = count;
+					}
+				});
+			}
+			
+			function updateCurrentFilterCounter(filter, count) {
+				const activeButton = document.querySelector('.gallery-filter-btn.active');
+				const counter = activeButton.querySelector('.category-counter');
+				if (counter) {
+					counter.textContent = count;
+				}
+			}
+			
+			// Add hover effects to project cards
+			projectCards.forEach(card => {
+				card.addEventListener('mouseenter', function() {
+					this.style.transform = 'translateY(-15px) scale(1.02)';
+				});
+				
+				card.addEventListener('mouseleave', function() {
+					if (!this.classList.contains('hidden')) {
+						this.style.transform = 'translateY(0) scale(1)';
+					}
+				});
+			});
+			
+			// Add smooth scroll to projects section when filtering
+			function scrollToProjects() {
+				const projectsSection = document.querySelector('.section-projects');
+				if (projectsSection) {
+					projectsSection.scrollIntoView({ 
+						behavior: 'smooth',
+						block: 'start'
+					});
+				}
+			}
+			
+			// Add scroll effect to filter buttons
+			filterButtons.forEach(button => {
+				button.addEventListener('click', function() {
+					setTimeout(scrollToProjects, 100);
+				});
+			});
+			
+			// Modal functionality
+			initModal();
 		});
+		
+		function initModal() {
+			const modal = document.getElementById('projectModal');
+			const modalOverlay = document.getElementById('modalOverlay');
+			const modalClose = document.getElementById('modalClose');
+			const modalCloseBtn = document.getElementById('modalCloseBtn');
+			const modalTriggers = document.querySelectorAll('.modal-trigger');
+			
+			// Open modal when project card is clicked
+			modalTriggers.forEach(trigger => {
+				trigger.addEventListener('click', function(e) {
+					e.preventDefault();
+					const projectCard = this.closest('.project-card');
+					openModal(projectCard);
+				});
+			});
+			
+			// Close modal when close buttons are clicked
+			modalClose.addEventListener('click', closeModal);
+			modalCloseBtn.addEventListener('click', closeModal);
+			modalOverlay.addEventListener('click', closeModal);
+			
+			// Close modal when Escape key is pressed
+			document.addEventListener('keydown', function(e) {
+				if (e.key === 'Escape' && modal.classList.contains('show')) {
+					closeModal();
+				}
+			});
+		}
+		
+		function openModal(projectCard) {
+			const modal = document.getElementById('projectModal');
+			const modalTitle = document.getElementById('modalTitle');
+			const modalDescription = document.getElementById('modalDescription');
+			const modalImage = document.getElementById('modalImage');
+			const modalCategory = document.getElementById('modalCategory');
+			const modalLink = document.getElementById('modalLink');
+			const modalTechList = document.getElementById('modalTechList');
+			const modalFeatures = document.getElementById('modalFeatures');
+			
+			// Get project data from data attributes
+			const title = projectCard.getAttribute('data-title');
+			const description = projectCard.getAttribute('data-description');
+			const image = projectCard.getAttribute('data-image');
+			const category = projectCard.querySelector('.project-category').textContent;
+			const link = projectCard.getAttribute('data-link');
+			const tech = projectCard.getAttribute('data-tech');
+			const features = projectCard.getAttribute('data-features');
+			
+			// Update modal content
+			modalTitle.textContent = title;
+			modalDescription.textContent = description;
+			modalImage.src = image;
+			modalImage.alt = title;
+			modalCategory.textContent = category;
+			modalLink.href = link;
+			
+			// Update technologies
+			modalTechList.innerHTML = '';
+			if (tech) {
+				tech.split(',').forEach(techItem => {
+					const techTag = document.createElement('span');
+					techTag.className = 'tech-tag';
+					techTag.textContent = techItem.trim();
+					modalTechList.appendChild(techTag);
+				});
+			}
+			
+			// Update features
+			modalFeatures.innerHTML = '';
+			if (features) {
+				features.split(',').forEach(feature => {
+					const li = document.createElement('li');
+					li.textContent = feature.trim();
+					modalFeatures.appendChild(li);
+				});
+			}
+			
+			// Show modal
+			modal.classList.add('show');
+			document.body.style.overflow = 'hidden';
+		}
+		
+		function closeModal() {
+			const modal = document.getElementById('projectModal');
+			modal.classList.remove('show');
+			document.body.style.overflow = 'auto';
+		}
 	</script>
 
 <!--===============================================================================================-->
